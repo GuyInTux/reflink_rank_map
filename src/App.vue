@@ -33,29 +33,9 @@ export default {
                 defaultFill: 'red'
             },
         });
-        // this.updateFills(); // for hard-coded testing
         this.fetchData();
     },
     methods: {
-        // // HARD-CODED TESTING
-        // updateFills() {
-        //     const getCountryISO3 = require('country-iso-2-to-3');
-        //     const fills = {};
-        //     const top5Countries = [
-        //         { country: "AZ", dial_code: 1000000 }, // Result: FAILED
-        //         { country: "RU", dial_code: 573123 }, // Result: Success
-        //         { country: "CN", dial_code: 500000 }, // Result: Success
-        //         { country: "IN", dial_code: 400000 }, // Result: Success
-        //         { country: "GB", dial_code: 300000 } // Result: FAILED
-        //     ];
-        //     for (const country_row of top5Countries) {
-        //         const iso3Format = getCountryISO3(country_row.country); // NOTE: .country is a key in the API response
-        //         country_row.iso3Format = iso3Format; // adds new key-value pair to country_row object literal
-        //         fills[country_row.iso3Format] = { fillKey: 'TOPFIVE', clicks: country_row.dial_code };
-        //     }
-        //     this.map.updateChoropleth(fills);
-        // }
-
         async fetchData() {
             try {
                 const response = await fetch('https://staging-sls.g2g.com/locale/country');
