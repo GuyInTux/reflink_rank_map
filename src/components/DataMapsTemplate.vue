@@ -42,11 +42,11 @@ export default {
             const getCountryISO3 = require('country-iso-2-to-3');
             const fills = {};
             const top5Countries = [
-                { country: "AZ", dial_code: 1000000 }, // Result: FAILED
+                { country: "az", dial_code: 1000000 }, // Result: FAILED, due to lower case
                 { country: "RU", dial_code: 573123 }, // Result: Success
                 { country: "CN", dial_code: 500000 }, // Result: Success
                 { country: "IN", dial_code: 400000 }, // Result: Success
-                { country: "GB", dial_code: 300000 } // Result: FAILED
+                { country: "gB", dial_code: 300000 } // Result: FAILED, due to inconsistent casing
             ];
             for (const country_row of top5Countries) {
                 const iso3Format = getCountryISO3(country_row.country); // NOTE: .country is a key in the API response
