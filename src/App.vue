@@ -20,10 +20,12 @@ export default {
         this.map = new Datamap({
             element: document.getElementById('container'),
             projection: 'mercator',
-            geographyConfig: {
+            geographyConfig: { // check line 20 under datamaps.js for default options
                 popupOnHover: true,
                 highlightOnHover: true,
-                popupTemplate: function (geography, data) { // CSS/ Quasar design goes in here
+                highlightFillColor: 'black',
+                highlightBorderColor: 'orange',
+                popupTemplate: function (geography, data) {
                     return `<div class="hoverinfo"><b>${geography.properties.name}</b><br>
                     Total Reflink Clicks:${data.clicks}</div>;`
                 }

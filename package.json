@@ -13,6 +13,7 @@
     "datamaps": "^0.5.9",
     "leaflet": "^1.9.4",
     "vue": "^3.2.13",
+    "vue-datamaps": "^0.3.6",
     "vue-google-charts": "^1.1.0"
   },
   "devDependencies": {
